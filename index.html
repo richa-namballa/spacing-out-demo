@@ -31,8 +31,7 @@ share-description: Binaural Music Source Separation Metrics
                                 Richa Namballa
                             </a>
                         </h4>
-                        <p><a href="mailto:rn2214@nyu.edu">rn2214@nyu.edu</a></p>
-                        <p>Music Technology<br>New York University<br>New York City, USA</p>
+                        Music Technology<br>New York University<br>New York City, USA
                     </div>
                 </div>
                 <!-- Magdalena Fuentes -->
@@ -44,8 +43,7 @@ share-description: Binaural Music Source Separation Metrics
                                 Magdalena Fuentes
                             </a>
                         </h4>
-                        <p><a href="mailto:mf3734@nyu.edu">mf3734@nyu.edu</a></p>
-                        <p>Music Technology / IDM<br>New York University,<br>New York City, USA</p>
+                        Music Technology / IDM<br>New York University,<br>New York City, USA
                     </div>
                 </div>
             </div>
@@ -56,7 +54,7 @@ share-description: Binaural Music Source Separation Metrics
     <h5 class="mx-auto text-center" style="color: black">Accepted at ISMIR 2026</h5>
 
         <br>
-    <h4 class="mx-auto text-center" style="color: black"><a href="">[PDF]</a> <a href="">[Poster]</a> <a href="">[GitHub]</a></h4>
+    <h4 class="mx-auto text-center" style="color: black"><a href="assets/pdf/paper.pdf">[PDF]</a> <a href="assets/pdf/poster.pdf">[Poster]</a> <a href="https://github.com/richa-namballa/binaural-mss">[GitHub]</a></h4>
 
     </h4>
     </div>
@@ -67,22 +65,307 @@ share-description: Binaural Music Source Separation Metrics
         Despite the rising popularity of immersive audio, binaural music remains underexplored in music information retrieval (MIR), particularly regarding the task of music source separation (MSS).
         While existing stereo MSS models can process binaural audio, they often degrade the spatial quality of the separated stems and undermine listener immersion.
         Through a perceptual study comparing binaural and stereo MSS outputs, we evaluate how well objective spatial distortion metrics correlate with human perception.
-        Our findings reveal varied agreement between these metrics and human judgment, highlighting a lack of reliability when used to evaluate binaural music tasks.
-        Specifically, we find that Interaural Time Difference (ITD) estimation is highly sensitive to noise and separation artifacts.
-        In evaluating two alternative ITD estimation methods, we uncover a critical trade-off between robustness and accuracy, particularly for narrow-band instruments like bass.
-        These results underscore the need for accurate, interpretable spatial metrics designed for binaural music to  develop models that preserve source localization and listener immersion.
+        Our findings reveal varied agreement between these metrics and human judgment, highlighting a lack of reliability when used to evaluate binaural music tasks. Specifically, we find that Interaural Time Difference (ITD) estimation is highly sensitive to noise and separation artifacts.
+        In evaluating two alternative ITD estimation methods, we uncover a critical trade-off between robustness and accuracy, particularly for narrow-band instruments like bass. These results underscore the need for accurate, interpretable spatial metrics designed for binaural music to develop models that preserve source localization and listener immersion.
     </p>
     <br>
 
     <br>
     <h3 style="text-align: center; padding-bottom: 20px;">Stimuli Examples</h3>
-
     <div class="container">
         <div class="row justify-content-center">
             <p class="box-warning">
                 For an optimal listening experience, please use good-quality headphones.
             </p>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-left">
+            <h4>Metrics</h4>
+            <br>
+            <br> SSR: Signal to Spatial Distortion Ratio
+            <br> SRR: Signal to Residual Distortion Ratio
+            <br> &Delta;ITD: Distortion in Interaural Time Difference
+            <br> &Delta;ILD: Distortion in Interaural Level Difference
+        </div>            
+    </div>
+
+    <!-- BASS -->
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <h4>Bass: Zeno - "Signs"</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><b>Binaural Input Mixture</b></p>
+            </div>
+            <div class="col">
+                <p><b>Reference Stem (&#952; = 90&deg;)</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/zeno_signs/BLD_M.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/zeno_signs/BLD_R.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p><b>Bi-SCNet Output</b></p>
+            </div>
+            <div class="col">
+                <p><b>SCNet Output</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/zeno_signs/BLD_B.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/zeno_signs/BLD_S.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>SSR: 14.41 dB &nbsp;&nbsp;&nbsp; SRR: 9.63 dB </p>
+                <p>&Delta;ITD: 816.33 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.39 dB</p>
+            </div>
+            <div class="col">
+                <p>SSR: 12.25 dB &nbsp;&nbsp;&nbsp; SRR: 1.89 dB </p>
+                <p>&Delta;ITD: 816.33 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 1.86 dB</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- DRUMS -->
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <h4>Drums: The Sunshine Garcia Band - "For I Am The Moon"</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><b>Binaural Input Mixture</b></p>
+            </div>
+            <div class="col">
+                <p><b>Reference Stem (&#952; = -90&deg;)</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_M.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_R.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p><b>Bi-SCNet Output</b></p>
+            </div>
+            <div class="col">
+                <p><b>SCNet Output</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_B.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_S.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>SSR: 23.44 dB &nbsp;&nbsp;&nbsp; SRR: 18.01 dB </p>
+                <p>&Delta;ITD: 22.68 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.13 dB</p>
+            </div>
+            <div class="col">
+                <p>SSR: 21.95 dB &nbsp;&nbsp;&nbsp; SRR: 10.77 dB </p>
+                <p>&Delta;ITD: 816.33 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.23 dB</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DRUMS -->
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <h4>Drums: The Sunshine Garcia Band - "For I Am The Moon"</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><b>Binaural Input Mixture</b></p>
+            </div>
+            <div class="col">
+                <p><b>Reference Stem (&#952; = -90&deg;)</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_M.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_R.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p><b>Bi-SCNet Output</b></p>
+            </div>
+            <div class="col">
+                <p><b>SCNet Output</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_B.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/sunshine_moon/DRA_S.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>SSR: 23.44 dB &nbsp;&nbsp;&nbsp; SRR: 18.01 dB </p>
+                <p>&Delta;ITD: 22.68 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.13 dB</p>
+            </div>
+            <div class="col">
+                <p>SSR: 21.95 dB &nbsp;&nbsp;&nbsp; SRR: 10.77 dB </p>
+                <p>&Delta;ITD: 816.33 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.23 dB</p>
+            </div>
+        </div>
+
+    </div>
+
+     <!-- VOCALS -->
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <h4>Vocals: Enda Reilly - "Cur An Long Ag Seol"</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><b>Binaural Input Mixture</b></p>
+            </div>
+            <div class="col">
+                <p><b>Reference Stem (&#952; = 0&deg;)</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/enda_cur/VCD_M.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/enda_cur/VCD_R.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p><b>Bi-SCNet Output</b></p>
+            </div>
+            <div class="col">
+                <p><b>SCNet Output</b></p>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; height: auto; margin-bottom: 30px;">
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/enda_cur/VCD_B.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="col">
+                <audio controls>
+                  <source src="assets/audio/enda_cur/VCD_S.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>SSR: 8.45 dB &nbsp;&nbsp;&nbsp; SRR: 16.04 dB </p>
+                <p>&Delta;ITD: 0.00 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.06 dB</p>
+            </div>
+            <div class="col">
+                <p>SSR: 8.41 dB &nbsp;&nbsp;&nbsp; SRR: 16.03 dB </p>
+                <p>&Delta;ITD: 0.00 &mu;s &nbsp;&nbsp;&nbsp; &Delta;ILD: 0.22 dB</p>
+            </div>
+        </div>
+
     </div>
 
 </body>
